@@ -195,6 +195,171 @@
         </div>
     </footer>
 
+    <!-- Scan Document Modal -->
+    <div class="modal-overlay" id="scanModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Scan Document</h3>
+                <button class="modal-close" id="closeScanModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="scan-steps">
+                    <div class="step active" id="step1">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <h4>Select Scanner</h4>
+                        </div>
+                        <div class="step-content">
+                            <div class="scanner-selection">
+                                <select id="scannerSelect" class="form-select">
+                                    <option value="">Detecting scanners...</option>
+                                </select>
+                                <button class="btn-refresh" id="refreshScanners">
+                                    <i class="fas fa-sync-alt"></i> Refresh
+                                </button>
+                            </div>
+                            <div class="scanner-status" id="scannerStatus">
+                                <i class="fas fa-search"></i>
+                                <span>Searching for connected scanners...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" id="step2">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <h4>Configure Scan Settings</h4>
+                        </div>
+                        <div class="step-content">
+                            <div class="scan-settings">
+                                <div class="setting-group">
+                                    <label for="scanQuality">Quality</label>
+                                    <select id="scanQuality" class="form-select">
+                                        <option value="150">Draft (150 DPI)</option>
+                                        <option value="300" selected>Standard (300 DPI)</option>
+                                        <option value="600">High (600 DPI)</option>
+                                        <option value="1200">Ultra High (1200 DPI)</option>
+                                    </select>
+                                </div>
+                                <div class="setting-group">
+                                    <label for="scanFormat">Format</label>
+                                    <select id="scanFormat" class="form-select">
+                                        <option value="pdf" selected>PDF</option>
+                                        <option value="jpg">JPEG</option>
+                                        <option value="png">PNG</option>
+                                    </select>
+                                </div>
+                                <div class="setting-group">
+                                    <label for="scanColor">Color Mode</label>
+                                    <select id="scanColor" class="form-select">
+                                        <option value="color" selected>Color</option>
+                                        <option value="grayscale">Grayscale</option>
+                                        <option value="bw">Black & White</option>
+                                    </select>
+                                </div>
+                                <div class="setting-group">
+                                    <label for="scanSize">Paper Size</label>
+                                    <select id="scanSize" class="form-select">
+                                        <option value="a4" selected>A4</option>
+                                        <option value="letter">Letter</option>
+                                        <option value="legal">Legal</option>
+                                        <option value="auto">Auto Detect</option>
+                                    </select>
+                                </div>
+                    <div class="step" id="step3">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <h4>Document Information</h4>
+                        </div>
+                        <div class="step-content">
+                            <div class="document-info">
+                                <div class="form-group">
+                                    <label for="docCategory">Category</label>
+                                    <select id="docCategory" class="form-select" required>
+                                        <option value="">Select Category</option>
+                                        <option value="MPC">MPC</option>
+                                        <option value="ADMISSION_CANCEL">Admission Cancel</option>
+                                        <option value="RE_REGISTER">Re-register</option>
+                                        <option value="REAPPEAR">Reappear</option>
+                                        <option value="FASTRACK">Fastrack</option>
+                                        <option value="HALL_TICKET">Hall Ticket</option>
+                                        <option value="MARKS_CARD">Marks Card</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="docYear">Academic Year</label>
+                                    <select id="docYear" class="form-select" required>
+                                        <option value="">Select Year</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="docName">Document Name</label>
+                                    <input type="text" id="docName" class="form-input" placeholder="Enter document name (UPPERCASE)" required>
+                                    <small class="form-hint">Document name will be automatically converted to UPPERCASE</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+                    <div class="step" id="step4">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <h4>Scan Document</h4>
+                        </div>
+                        <div class="step-content">
+                            <div class="scan-preview">
+                                <div class="preview-area" id="previewArea">
+                                    <div class="preview-placeholder">
+                                        <i class="fas fa-file-image"></i>
+                                        <p>Document preview will appear here</p>
+                                    </div>
+                                </div>
+                                <div class="scan-controls">
+                                    <button class="btn-scan" id="startScan">
+                                        <i class="fas fa-play"></i>
+                                        Start Scanning
+                                    </button>
+                                    <button class="btn-scan secondary" id="previewScan" style="display: none;">
+                                        <i class="fas fa-eye"></i>
+                                        Preview
+                                    </button>
+                                    <button class="btn-scan secondary" id="rescan" style="display: none;">
+                                        <i class="fas fa-redo"></i>
+                                        Rescan
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="scan-progress" id="scanProgress" style="display: none;">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progressFill"></div>
+                                </div>
+                                <div class="progress-text" id="progressText">Initializing scanner...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+                <div class="modal-actions">
+                    <button class="btn-secondary" id="prevStep" style="display: none;">
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button class="btn-primary" id="nextStep">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-primary" id="downloadScan" style="display: none;">
+                        <i class="fas fa-download"></i> Download Document
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+                    </div>
     <script src="department-page-script.js"></script>
 </body>
 </html> 

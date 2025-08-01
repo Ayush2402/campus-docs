@@ -153,6 +153,24 @@ function handleUpload() {
     alert('Upload functionality would open here.\n\nFeatures:\n- File selection\n- Category selection\n- Year selection\n- Filename validation (UPPERCASE)\n- Upload progress');
 }
 
+function handleScan() {
+    const userInfo = JSON.parse(localStorage.getItem('bmsceUser'));
+    if (userInfo.role === 'User') {
+        alert('Scan functionality is only available for Admin and Super User roles.');
+        return;
+    }
+    
+    // Open scan modal
+    const scanModal = document.getElementById('scanModal');
+    scanModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Reset modal to first step
+    resetScanModal();
+    
+    // Start scanner detection
+    detectScanners();
+}
 function handleSearch() {
     alert('Search functionality would open here.\n\nFeatures:\n- Search by document name\n- Filter by category\n- Filter by year\n- Advanced search options');
 }
