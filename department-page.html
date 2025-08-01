@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMSCE CAMPUS DOC - Computer Science Engineering</title>
+    <link rel="stylesheet" href="department-page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BMSCE CAMPUS DOC</h2>
+            </div>
+            <div class="nav-breadcrumb">
+                <a href="departments.html" class="breadcrumb-link">
+                    <i class="fas fa-arrow-left"></i> Departments
+                </a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="current-dept">Computer Science Engineering</span>
+            </div>
+            <div class="nav-user">
+                <span class="user-role" id="userRole">User</span>
+                <button class="btn-logout" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="dept-info">
+                <div class="dept-icon-large">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="dept-details">
+                    <h1>Computer Science Engineering</h1>
+                    <p>Access and manage CSE department documents</p>
+                    <div class="dept-stats">
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Documents</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">7</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2024</span>
+                            <span class="stat-label">Current Year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Document Categories -->
+    <main class="categories-container">
+        <div class="container">
+            <div class="categories-header">
+                <h2>Document Categories</h2>
+                <p>Select a category to view or manage documents</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card" data-category="MPC">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>MPC</h3>
+                    <p>Model Paper Collection and academic resources</p>
+                    <div class="category-stats">
+                        <span class="doc-count">25 documents</span>
+                        <span class="last-updated">Updated 2 days ago</span>
+                    </div>
+                    <button class="btn-access">Access Documents</button>
+                </div>
+
+                <div class="category-card" data-category="ADMISSION_CANCEL">
+                    <div class="category-icon">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <h3>Admission Cancel</h3>
+                    <p>Admission cancellation forms and procedures</p>
+                    <div class="category-stats">
+                        <span class="doc-count">12 documents</span>
+                        <span class="last-updated">Updated 1 week ago</span>
+                    </div>
+                    <button class="btn-access">Access Documents</button>
+                </div>
+
+                <div class="category-card" data-category="RE_REGISTER">
+                    <div class="category-icon">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <h3>Re-register</h3>
+                    <p>Re-registration forms and guidelines</p>
+                    <div class="category-stats">
+                        <span class="doc-count">18 documents</span>
+                        <span class="last-updated">Updated 3 days ago</span>
+                    </div>
+                    <button class="btn-access">Access Documents</button>
+                </div>
+
+                <div class="category-card" data-category="REAPPEAR">
+                    <div class="category-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Reappear</h3>
+                    <p>Reappear examination forms and schedules</p>
+                    <div class="category-stats">
+                        <span class="doc-count">30 documents</span>
+                        <span class="last-updated">Updated 5 days ago</span>
+                    </div>
+                    <button class="btn-access">Access Documents</button>
+                </div>
+
+                <div class="category-card" data-category="FASTRACK">
+                    <div class="category-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Fastrack</h3>
+                    <p>Fastrack program documents and applications</p>
+                    <div class="category-stats">
+                        <span class="doc-count">8 documents</span>
+                        <span class="last-updated">Updated 1 week ago</span>
+                    </div>
+                    <button class="btn-access">Access Documents</button>
+                </div>
+
+                <div class="category-card" data-category="HALL_TICKET">
+                    <div class="category-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Hall Ticket</h3>
+                    <p>Hall ticket applications and downloads</p>
+                    <div class="category-stats">
+                        <span class="doc-count">45 documents</span>
+                        <span class="last-updated">Updated 1 day ago</span>
+                    </div>
+                    <button class="btn-access">Access Documents</button>
+                </div>
+
+                <div class="category-card" data-category="MARKS_CARD">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Marks Card</h3>
+                    <p>Marks cards and academic records</p>
+                    <div class="category-stats">
+                        <span class="doc-count">60 documents</span>
+                        <span class="last-updated">Updated today</span>
+                    </div>
+                    <button class="btn-access">Access Documents</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+        <div class="container">
+            <h3>Quick Actions</h3>
+            <div class="actions-grid">
+                <button class="action-btn" id="uploadBtn">
+                    <i class="fas fa-upload"></i>
+                    <span>Upload Document</span>
+                </button>
+                <button class="action-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                    <span>Search Documents</span>
+                </button>
+                <button class="action-btn" id="recentBtn">
+                    <i class="fas fa-clock"></i>
+                    <span>Recent Documents</span>
+                </button>
+                <button class="action-btn" id="downloadBtn">
+                    <i class="fas fa-download"></i>
+                    <span>Bulk Download</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BMSCE CAMPUS DOC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="department-page-script.js"></script>
+</body>
+</html> 

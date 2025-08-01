@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMSCE CAMPUS DOC - Department Selection</title>
+    <link rel="stylesheet" href="departments-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BMSCE CAMPUS DOC</h2>
+            </div>
+            <div class="nav-user">
+                <span class="user-role" id="userRole">User</span>
+                <button class="btn-logout" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Select Department</h1>
+            <p>Choose a department to access its documents</p>
+        </div>
+    </header>
+
+    <!-- Departments Grid -->
+    <main class="departments-container">
+        <div class="container">
+            <div class="departments-grid">
+                <!-- Engineering Branches -->
+                <div class="department-category">
+                    <h2 class="category-title">Engineering Branches</h2>
+                    <div class="departments-list">
+                        <div class="department-card" data-dept="CV">
+                            <div class="dept-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <h3>Civil Engineering</h3>
+                            <p>CV department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="MECH">
+                            <div class="dept-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>Mechanical Engineering</h3>
+                            <p>Mechanical department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="EEE">
+                            <div class="dept-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Electrical and Electronics Engineering</h3>
+                            <p>EEE department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="ECE">
+                            <div class="dept-icon">
+                                <i class="fas fa-broadcast-tower"></i>
+                            </div>
+                            <h3>Electronics and Communication Engineering</h3>
+                            <p>ECE department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="IEM">
+                            <div class="dept-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3>Industrial Engineering and Management</h3>
+                            <p>IEM department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="CSE">
+                            <div class="dept-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Computer Science and Engineering</h3>
+                            <p>CSE department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="ETE">
+                            <div class="dept-icon">
+                                <i class="fas fa-satellite-dish"></i>
+                            </div>
+                            <h3>Electronics and Telecommunication Engineering</h3>
+                            <p>ETE department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="ISE">
+                            <div class="dept-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Information Science and Engineering</h3>
+                            <p>ISE department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="EIE">
+                            <div class="dept-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h3>Electronics and Instrumentation Engineering</h3>
+                            <p>EIE department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="MEE">
+                            <div class="dept-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>Medical Electronics Engineering</h3>
+                            <p>MEE department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="CHEM">
+                            <div class="dept-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3>Chemical Engineering</h3>
+                            <p>Chemical department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="BT">
+                            <div class="dept-icon">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <h3>Biotechnology</h3>
+                            <p>BT department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="AERO">
+                            <div class="dept-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <h3>Aerospace Engineering</h3>
+                            <p>Aerospace department documents</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialized Computer Science -->
+                <div class="department-category">
+                    <h2 class="category-title">Specialized Computer Science</h2>
+                    <div class="departments-list">
+                        <div class="department-card" data-dept="MCA">
+                            <div class="dept-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h3>Computer Applications (MCA)</h3>
+                            <p>MCA department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="AI_ML">
+                            <div class="dept-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Machine Learning (AI and ML)</h3>
+                            <p>AI/ML department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="CSE_DS">
+                            <div class="dept-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Computer Science and Engineering (DS)</h3>
+                            <p>Data Science department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="CSE_IOT">
+                            <div class="dept-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <h3>Computer Science and Engineering (IoT and CS)</h3>
+                            <p>IoT department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="AIDS">
+                            <div class="dept-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Artificial Intelligence and Data Science</h3>
+                            <p>AIDS department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="CSBS">
+                            <div class="dept-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Computer Science and Business Systems</h3>
+                            <p>CSBS department documents</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Science & Research -->
+                <div class="department-category">
+                    <h2 class="category-title">Science & Research Departments</h2>
+                    <div class="departments-list">
+                        <div class="department-card" data-dept="MSRC">
+                            <div class="dept-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Management Studies and Research Centre</h3>
+                            <p>MSRC department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="MATH">
+                            <div class="dept-icon">
+                                <i class="fas fa-square-root-alt"></i>
+                            </div>
+                            <h3>Mathematics Department</h3>
+                            <p>Mathematics department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="PHYSICS">
+                            <div class="dept-icon">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <h3>Physics Department</h3>
+                            <p>Physics department documents</p>
+                        </div>
+                        <div class="department-card" data-dept="CHEMISTRY">
+                            <div class="dept-icon">
+                                <i class="fas fa-flask-vial"></i>
+                            </div>
+                            <h3>Chemistry Department</h3>
+                            <p>Chemistry department documents</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BMSCE CAMPUS DOC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="departments-script.js"></script>
+</body>
+</html> 
